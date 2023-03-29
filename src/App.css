@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  background-color: var(--very-dark-blue);
+}
+* {
+  color: var(--pale-blue);
+  font-family: 'Rubik', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
+  padding: 10%;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.profile {
+  background-color: var(--blue);
+  border-radius: 5%;
+  padding: 15% 10%;
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+}
+
+.profile img {
+  width: 40%;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-weight: 100;
+  font-size: 15px;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 40px;
+  color: whitesmoke;
+  margin: 0 0 40px 0;
+  width: 100px
+}
+
+.toggle-wrapper {
+  box-sizing: border-box;
+  background-color: var(--dark-blue);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 145% 0 0 10%;
+  border-radius: 5%;
+  top: 0
+}
+
+.toggle {
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: var(--desaturated-blue)
+}
+
+.active {
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: whitesmoke
+}
+
+.toggle:hover {
+  color: whitesmoke;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  gap: 20px 20px;
+  flex-grow: 2;
+  margin-left: 20px;
+}
+
+.card-header {
+  height: 50px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Work {
+  background-color: var(--work);
+}
+
+.Play {
+  background-color: var(--play);
+}
+
+.Study {
+  background-color: var(--study);
+}
+
+.Exercise {
+  background-color: var(--exercise);
+}
+
+.Social {
+  background-color: var(--social);
+}
+
+.Self.Care {
+  background-color: var(--self-care);
+}
+
+svg {
+  top: -10px;
+  position: relative;
+}
+
+.time-content {
+  padding: 10%;
+  border-radius: 10px;
+  background-color: var(--dark-blue);
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  font-weight: 400;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0 0 10px 0;
+  color: whitesmoke;
 }
